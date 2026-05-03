@@ -6,33 +6,29 @@ on:
       - 'v*'
 
 jobs:
-  publish:
+  clawhub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install ClawHub CLI
-        run: npm i -g clawhub
-
+      - run: npm i -g clawhub
       - name: Publish to ClawHub
         env:
           CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
         run: |
-          VERSION="${GITHUB_REF#refs/tags/v}"
           mkdir -p skills/poor-mans-opus
           cp SKILL.md SOUL.md LICENSE CHANGELOG.md README.md skills/poor-mans-opus/
           cd skills && clawhub sync --all --no-input
 
+  huggingface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Publish to HuggingFace
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -42,14 +38,9 @@ jobs:
           import os
           from huggingface_hub import HfApi
           api = HfApi(token=os.environ["HF_TOKEN"])
-          files = ["SKILL.md","SOUL.md","README.md","LICENSE","CHANGELOG.md"]
-          for f in files:
+          for f in ["SKILL.md","SOUL.md","README.md","LICENSE","CHANGELOG.md"]:
               if os.path.exists(f):
                   api.upload_file(path_or_fileobj=f, path_in_repo=f, repo_id="ilanguage/poor-mans-opus", repo_type="model")
                   api.upload_file(path_or_fileobj=f, path_in_repo=f, repo_id="ilanguage/poor-mans-opus-soul", repo_type="dataset")
-          print("✅ Published to HuggingFace")
+          print("✅ HuggingFace synced")
           PYEOF
-
-      - name: Summary
-        run: |
-          echo "✅ v${GITHUB_REF#refs/tags/v} → ClawHub + HuggingFace"
