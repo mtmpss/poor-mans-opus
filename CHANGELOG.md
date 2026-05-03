@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.3] - 2026-05-03
+
+### Added
+- Multilingual README: English, 简体中文, 日本語
+- Language switcher links between all three versions
+
 ## [2.0.2] - 2026-05-03
 
 ### Added
@@ -21,8 +27,6 @@
 
 ### Changed
 - Complete rewrite: pure behavioral DNA via I-Lang `::GENE{}` protocol
-- Removed execution-level rules (scope shifted to SOUL.md only)
-- Cleaner `::GENE{}` blocks targeting specific behavioral dimensions
 - Professional README with cost comparison table
 
 ### Added
@@ -34,4 +38,3 @@
 
 ### Added
 - Initial release: DeepSeek Reasoner + I-Lang SOUL = Opus-quality output
-- SKILL.md with ::DNA{} protocol header, MIT-0 license
