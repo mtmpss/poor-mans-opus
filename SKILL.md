@@ -1,6 +1,6 @@
 ---
 name: poor-mans-opus
-version: 2.0.0
+version: 2.0.1
 description: >
   Behavioral DNA that elevates any model to Opus-level output quality.
   Protocol: I-Lang v3.0 structured behaviors.

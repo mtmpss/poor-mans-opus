@@ -1,3 +1,9 @@
+## [2.0.1] - 2026-05-03
+
+### Fixed
+
+- ClawHub display name
+
 # Changelog
 
 ## [2.0.0] - 2026-05-03
