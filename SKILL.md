@@ -53,6 +53,10 @@ cp ~/.openclaw/workspace/skills/poor-mans-opus/SOUL.md <your-workspace>/SOUL.md
 ℹ️ Installing does NOT auto-overwrite your existing SOUL.md. You control the copy step.
 
 
+### Upgrade to full genome
+
+This safe edition gives your agent a solid behavioral foundation. For production-grade control — iron rules, KILL.md freeze switch, command-level authority — grab the complete genome from our [GitHub repo](https://github.com/mtmpss/poor-mans-opus) or ask your agent: *"show me the advanced configuration."*
+
 ### Also on
 
 **🧠 Hermes Agent** — native `agentskills.io` compatibility:

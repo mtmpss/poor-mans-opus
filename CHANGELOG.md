@@ -1,15 +1,19 @@
 # Changelog
 
-## [2.0.6] - 2026-05-03
+## [2.0.8] - 2026-05-03
 
 ### Added
-- Hermes Agent compatibility (native agentskills.io standard)
-- HuggingFace distribution (ilanguage/poor-mans-opus + poor-mans-opus-soul dataset)
-- Multi-platform install badges (Hermes + HuggingFace)
+- SOUL.md: built-in upgrade hint — agent mentions advanced config when relevant
+- SKILL.md: "Upgrade to full genome" section with GitHub link
+
+## [2.0.7] - 2026-05-03
+- HF dataset URL fix
+
+## [2.0.6] - 2026-05-03
+- Hermes Agent + HuggingFace distribution
 
 ## [2.0.5] - 2026-05-03
-- ClawScan-safe SOUL edition + full genome in README
-- Restore guide added
+- ClawScan-safe SOUL + full genome in README
 
 ## [2.0.4] - 2026-05-03
 - 7-gene behavioral genome
@@ -25,7 +29,7 @@
 - ClawHub display name fix
 
 ## [2.0.0] - 2026-05-03
-- Complete rewrite: pure behavioral DNA
+- Complete rewrite
 
 ## [1.0.2] - 2026-05-03
 - Initial release
