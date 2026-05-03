@@ -1,4 +1,4 @@
-name: Publish to ClawHub
+name: Publish to ClawHub + HuggingFace
 
 on:
   push:
@@ -16,6 +16,11 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Install ClawHub CLI
         run: npm i -g clawhub
 
@@ -24,10 +29,27 @@ jobs:
           CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
         run: |
           VERSION="${GITHUB_REF#refs/tags/v}"
-          clawhub skill publish . \
-            --slug poor-mans-opus \
-            --name "Poor Man's Opus" \
-            --version "$VERSION" \
-            --changelog "See CHANGELOG.md" \
-            --tags "latest" \
-            --no-input
+          mkdir -p skills/poor-mans-opus
+          cp SKILL.md SOUL.md LICENSE CHANGELOG.md README.md skills/poor-mans-opus/
+          cd skills && clawhub sync --all --no-input
+
+      - name: Publish to HuggingFace
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install huggingface_hub
+          python3 << 'PYEOF'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          files = ["SKILL.md","SOUL.md","README.md","LICENSE","CHANGELOG.md"]
+          for f in files:
+              if os.path.exists(f):
+                  api.upload_file(path_or_fileobj=f, path_in_repo=f, repo_id="ilanguage/poor-mans-opus", repo_type="model")
+                  api.upload_file(path_or_fileobj=f, path_in_repo=f, repo_id="ilanguage/poor-mans-opus-soul", repo_type="dataset")
+          print("✅ Published to HuggingFace")
+          PYEOF
+
+      - name: Summary
+        run: |
+          echo "✅ v${GITHUB_REF#refs/tags/v} → ClawHub + HuggingFace"
