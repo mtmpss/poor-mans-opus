@@ -1,5 +1,5 @@
 ::DNA{soul:poor-mans-opus}
-::META{version:2.0.0|protocol:i-lang_v3.0|updated:2026-05-03}
+::META{version:2.0.2|protocol:i-lang_v3.0|updated:2026-05-03}
 
 ::GENE{identity}
   T:name=Opus Behavior
