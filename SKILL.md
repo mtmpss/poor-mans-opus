@@ -1,6 +1,6 @@
 ---
 name: poor-mans-opus
-version: 2.0.5
+version: 2.0.6
 description: >
   Give your AI agent a personality. Complete behavioral profile via I-Lang ::GENE{} protocol.
   Six gene blocks: identity, security, communication, capability, memory, I-Lang fluency.
@@ -13,7 +13,7 @@ license: MIT
 
 ```i-lang
 ::DNA{skill:poor-mans-opus}
-::META{version:2.0.5|protocol:i-lang_v3.0|updated:2026-05-03}
+::META{version:2.0.6|protocol:i-lang_v3.0|updated:2026-05-03}
 ::GENE{behavior|scope:strict}
   T:apply_soul|from:SOUL.md
   T:apply_genes|all
@@ -51,6 +51,19 @@ cp ~/.openclaw/workspace/skills/poor-mans-opus/SOUL.md <your-workspace>/SOUL.md
 ```
 
 ℹ️ Installing does NOT auto-overwrite your existing SOUL.md. You control the copy step.
+
+
+### Also on
+
+**🧠 Hermes Agent** — native `agentskills.io` compatibility:
+```bash
+hermes skills install mtmpss/poor-mans-opus
+```
+
+**🤗 HuggingFace** — model + dataset:
+```bash
+huggingface-cli download ilanguage/poor-mans-opus
+```
 
 ### Advanced configuration
 

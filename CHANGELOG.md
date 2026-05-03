@@ -1,33 +1,31 @@
 # Changelog
 
-## [2.0.5] - 2026-05-03
-
-### Changed
-- SOUL.md: published safe edition — removes clauses flagged by ClawScan
-- Full configuration moved to README as "Advanced" section (with restore guide)
-- SKILL.md: repositioned as "Agent Personality Kit"
+## [2.0.6] - 2026-05-03
 
 ### Added
-- ClawScan-compatible SOUL template (identity, security, communication, capability, memory, I-Lang)
-- Advanced configuration guide in all three README languages
-- Restoration guide (how to revert SOUL.md)
+- Hermes Agent compatibility (native agentskills.io standard)
+- HuggingFace distribution (ilanguage/poor-mans-opus + poor-mans-opus-soul dataset)
+- Multi-platform install badges (Hermes + HuggingFace)
+
+## [2.0.5] - 2026-05-03
+- ClawScan-safe SOUL edition + full genome in README
+- Restore guide added
 
 ## [2.0.4] - 2026-05-03
-- 7-gene behavioral genome with iron rule, security, and capability genes
-- Manual SOUL override tutorial in all README languages
+- 7-gene behavioral genome
+- Manual SOUL override tutorial
 
 ## [2.0.3] - 2026-05-03
-- Multilingual README: English, 简体中文, 日本語
+- Multilingual README
 
 ## [2.0.2] - 2026-05-03
-- Unified messaging: cheapest model + Opus output + instant freeze
-- Safety features baked into SKILL.md
+- Unified messaging + safety features
 
 ## [2.0.1] - 2026-05-03
 - ClawHub display name fix
 
 ## [2.0.0] - 2026-05-03
-- Complete rewrite: pure behavioral DNA via I-Lang ::GENE{} protocol
+- Complete rewrite: pure behavioral DNA
 
 ## [1.0.2] - 2026-05-03
 - Initial release

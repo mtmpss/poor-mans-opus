@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blue.svg)](https://openclaw.ai)
 [![I-Lang Protocol](https://img.shields.io/badge/I--Lang-v3.0-green.svg)](https://ilang.ai)
+[![Hermes Compatible](https://img.shields.io/badge/Hermes-Compatible-8A2BE2.svg)](https://hermes-agent.org)
+[![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-orange.svg)](https://huggingface.co/ilanguage/poor-mans-opus)
 
 🌐 [简体中文](README.zh-CN.md) | [日本語](README.ja.md)
 
@@ -167,6 +169,28 @@ cp ~/SOUL.md.bak <your-workspace>/SOUL.md
 
 - **Any model** — DNA is model-agnostic
 - **Best on:** reasoning models (DeepSeek V4 Pro / Reasoner, o-series, Gemini Thinking)
+
+
+---
+
+## Also available on
+
+### 🤗 HuggingFace
+```bash
+# Install as HF Skill
+huggingface-cli download ilanguage/poor-mans-opus
+```
+[ilanguage/poor-mans-opus](https://huggingface.co/ilanguage/poor-mans-opus) — Model repo  
+[ilanguage/poor-mans-opus-soul](https://huggingface.co/ilanguage/poor-mans-opus-soul) — SOUL template dataset
+
+### 🧠 Hermes Agent
+Hermes Agent is natively compatible with the `agentskills.io` standard — same format as this skill. No conversion needed.
+
+```bash
+# Install directly from GitHub
+hermes skills install mtmpss/poor-mans-opus
+```
+Or install from ClawHub (listed as a Hermes community source).
 
 ---
 

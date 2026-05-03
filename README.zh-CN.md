@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blue.svg)](https://openclaw.ai)
 [![I-Lang Protocol](https://img.shields.io/badge/I--Lang-v3.0-green.svg)](https://ilang.ai)
+[![Hermes Compatible](https://img.shields.io/badge/Hermes-兼容-8A2BE2.svg)](https://hermes-agent.org)
+[![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-orange.svg)](https://huggingface.co/ilanguage/poor-mans-opus)
 
 🌐 [English](README.md) | [日本語](README.ja.md)
 
@@ -165,6 +167,26 @@ cp ~/SOUL.md.bak <你的workspace>/SOUL.md
 
 - **任何模型**——行为基因不挑模型
 - **最佳**：推理模型（DeepSeek V4 Pro / Reasoner、o-series、Gemini Thinking）
+
+
+---
+
+## 也可以在这里安装
+
+### 🤗 HuggingFace
+```bash
+huggingface-cli download ilanguage/poor-mans-opus
+```
+[ilanguage/poor-mans-opus](https://huggingface.co/ilanguage/poor-mans-opus) — 模型仓库  
+[ilanguage/poor-mans-opus-soul](https://huggingface.co/ilanguage/poor-mans-opus-soul) — SOUL 模板数据集
+
+### 🧠 Hermes Agent
+Hermes Agent 原生兼容 `agentskills.io` 标准——跟这个技能格式完全一致，无需转换。
+
+```bash
+hermes skills install mtmpss/poor-mans-opus
+```
+或从 ClawHub 安装（Hermes 已将 ClawHub 列为社区技能源）。
 
 ---
 

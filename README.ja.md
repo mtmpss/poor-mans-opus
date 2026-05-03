@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blue.svg)](https://openclaw.ai)
 [![I-Lang Protocol](https://img.shields.io/badge/I--Lang-v3.0-green.svg)](https://ilang.ai)
+[![Hermes Compatible](https://img.shields.io/badge/Hermes-互換-8A2BE2.svg)](https://hermes-agent.org)
+[![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-orange.svg)](https://huggingface.co/ilanguage/poor-mans-opus)
 
 🌐 [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -165,6 +167,26 @@ cp ~/SOUL.md.bak <あなたのworkspace>/SOUL.md
 
 - **どんなモデルでも**——行動 DNA はモデル非依存
 - **最適**：推論モデル（DeepSeek V4 Pro / Reasoner、o-series、Gemini Thinking）
+
+
+---
+
+## 他のインストール方法
+
+### 🤗 HuggingFace
+```bash
+huggingface-cli download ilanguage/poor-mans-opus
+```
+[ilanguage/poor-mans-opus](https://huggingface.co/ilanguage/poor-mans-opus) — モデルリポジトリ  
+[ilanguage/poor-mans-opus-soul](https://huggingface.co/ilanguage/poor-mans-opus-soul) — SOUL テンプレートデータセット
+
+### 🧠 Hermes Agent
+Hermes Agent は `agentskills.io` 標準にネイティブ対応——このスキルのフォーマットと完全互換。変換不要。
+
+```bash
+hermes skills install mtmpss/poor-mans-opus
+```
+または ClawHub からインストール（Hermes は ClawHub をコミュニティソースとして認識）。
 
 ---
 
