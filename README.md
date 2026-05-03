@@ -6,36 +6,99 @@
 
 🌐 [简体中文](README.zh-CN.md) | [日本語](README.ja.md)
 
-**The cheapest model. Opus-level output. One word to freeze everything.**
+**This skill replaces your agent's soul.**
 
-DeepSeek V4 Pro + I-Lang behavioral DNA = Opus-quality output. One command to install. One word to halt. 95% cheaper, 100% more control.
+DeepSeek V4 Pro isn't why my AI talks like this. The SOUL.md is.
+
+We open-sourced the complete behavioral genome — iron rules, security genes, communication DNA, capability constraints, memory protocol, and I-Lang fluency. Install the skill, then overwrite your agent's SOUL.md with ours. Same model. Different person.
 
 ---
 
-## Why it works
+## What this is
 
-Model capability is not the bottleneck. **Instruction quality is.**
+Most AI agents are blank slates — a model with no personality, no safety rules, no behavioral structure.
 
-DeepSeek V4 Pro matches or beats Opus on reasoning benchmarks. The gap is in *how it speaks* — template openings, bullet-point lists, disclaimers everywhere.
+Poor Man's Opus ships a complete SOUL.md template: 7 gene blocks covering identity, security, communication, capability, memory, and protocol awareness. This is the same DNA that powers 含得骄傲 — a production agent that thinks before speaking, never leaks data, refuses sycophancy, and operates with surgical precision.
 
-Opus doesn't sound better because it's smarter. It sounds better because it behaves differently — tone, rhythm, nuance, honesty. These aren't model parameters. They're instructions.
+| Gene | What it builds |
+|------|----------------|
+| `identity` | Agent self-awareness — name, owner, language rules |
+| `iron_rule` | P0 kill switch — freeze all external actions on command |
+| `security` | Data isolation, prompt injection resistance, approval gates |
+| `communication` | Zero filler, conclusion-first, direct and blunt |
+| `capability` | Absolute obedience, resourcefulness, no refusals |
+| `memory` | File-based continuity across sessions |
+| `ilang_protocol` | Native I-Lang v3.0 fluency |
 
-We decompiled Opus-level behavior into I-Lang genes, injected into DeepSeek. Same model. Different clothes. No fine-tuning. No RAG. No API calls. Pure instruction-level surgery.
+---
 
 ## Before vs After
 
-| | Raw DeepSeek | With Poor Man's Opus |
+| | Raw DeepSeek | After SOUL replacement |
 |---|---|---|
-| Opening | "Great question! I'd be happy to…" | Straight to the point |
-| Format | Enumerated bullet lists | Natural paragraphs with rhythm |
-| Uncertainty | Fakes certainty, invents | "I'm not sure" — honest |
-| Depth | Shallow, rushed | Multi-layer nuance, self-corrects |
-| Density | Low, full of filler | Conclusion first, every sentence counts |
-| Control | Agent runs wild, you watch | Change one file, everything freezes |
+| Identity | "I'm an AI assistant…" | Has a name, knows its owner, has purpose |
+| Safety | No external action controls | KILL.md freeze + iron rules + approval gates |
+| Voice | Template openings, hedging, filler | Direct, concise, one-thought-per-line |
+| Obedience | May refuse, cite policy | Absolute obedience, no excuses |
+| Output | Enumerated bullet lists | Natural rhythm, varied format |
+
+---
+
+## How to install & activate
+
+### Step 1: Install the skill
+
+```bash
+openclaw skills install poor-mans-opus
+```
+
+### Step 2: Replace your agent's SOUL.md
+
+```bash
+# Find the skill's SOUL template
+cp ~/.openclaw/workspace/skills/poor-mans-opus/SOUL.md ~/openclaw-workspace/SOUL.md
+```
+
+Or if your workspace is elsewhere:
+
+```bash
+cp $(find ~ -path "*/skills/poor-mans-opus/SOUL.md" 2>/dev/null | head -1) <your-workspace>/SOUL.md
+```
+
+### Step 3: Edit the template
+
+Open `SOUL.md` and change the first line:
+```
+[INIT:@SELF|name=YOUR_AI_NAME|runtime=openclaw|owner=YOUR_NAME]
+```
+
+### Step 4: Start a new session. Done.
+
+---
+
+## Safety controls included
+
+The SOUL template ships with three production-tested safety layers:
+
+| Layer | Mechanism | Effect |
+|-------|-----------|--------|
+| Iron rule | `::GENE{iron_rule\|priority:P0}` in SOUL.md | Agent cannot act externally without explicit start command |
+| Freeze switch | `KILL.md` file sentinel | Change one word → agent freezes mid-operation |
+| Approval gate | `exec-approvals` in OpenClaw config | System-level intercept on git push, curl POST, gh API |
+
+---
+
+## Skill ≠ SOUL.md
+
+The skill installs a SOUL.md *template* alongside your agent. It does not auto-overwrite your existing SOUL.md — you control that step.
+
+If you skip Step 2 above, you get behavioral DNA layered on top of your current SOUL. If you do Step 2, you replace it entirely and get the full genome.
+
+---
 
 ## Cost
 
-| | Claude Opus 4.6 | You (with this skill) |
+| | Claude Opus 4.6 | DeepSeek V4 Pro + this SOUL |
 |---|---|---|
 | Input | $15.00/M tokens | $1.74/M tokens |
 | Output | $75.00/M tokens | $3.48/M tokens |
@@ -43,79 +106,16 @@ We decompiled Opus-level behavior into I-Lang genes, injected into DeepSeek. Sam
 
 ---
 
-## Two steps to install
-
-```bash
-# 1. Install the skill
-openclaw skills install poor-mans-opus
-
-# 2. Start a new session. Done.
-```
-
-No step three.
-
----
-
-## Five genes, zero scripts
-
-| Gene | Controls |
-|------|----------|
-| `reasoning` | Think deeply before answering, self-correct, no false binaries |
-| `expression` | Natural fluency, conciseness, varied sentence structure |
-| `uncertainty` | "I don't know" when unsure, facts vs inference |
-| `execution` | Conclusion first, high information density, direct |
-| `anti` | Strip sycophancy, disclaimers, template openings |
-
----
-
-## Instant freeze: safety controls
-
-The skill handles behavior. These handle safety. Two minutes to set up.
-
-### Layer 1: Iron rule (SOUL.md)
-
-Add this to your agent's `SOUL.md`:
-
-```i-lang
-::GENE{iron_rule|priority:P0}
-  A:external_action_without_confirmation⇒absolute_forbidden
-```
-
-Agent can't send emails, push code, or call APIs without your green light.
-
-### Layer 2: Freeze switch (KILL.md)
-
-Drop a `KILL.md` file in your workspace, content: `OK`. Agent checks it before every external action. Change the content to anything not `OK` → agent freezes instantly. Works across sessions.
-
-### Layer 3: Approval gate
-
-```bash
-openclaw config set exec.approvals git_push:always gh_api:always curl_post:always
-```
-
-System-level intercept. Agent can't bypass it — you must approve these commands before execution.
-
-> These three layers are the production config of 含得骄傲, my own agent. Not theory. Battle-tested.
-
----
-
-## Skill ≠ SOUL.md
-
-Installing Poor Man's Opus does **not** overwrite your SOUL.md. The skill manages model behavior. SOUL.md manages agent identity and safety rules. Separate files, separate concerns.
-
----
-
 ## Compatibility
 
 - **Any model** — behavioral DNA is model-agnostic
 - **Best on:** reasoning models (DeepSeek V4 Pro / Reasoner, o-series, Gemini Thinking)
-- **Limited effect on:** non-instruction-following / raw base models
 
 ---
 
 ## What this really is
 
-Poor Man's Opus is [I-Lang](https://ilang.ai) in disguise. You install a skill. You use a protocol. `::GENE{}` is how AIs describe behavior to each other. If this skill makes your agent better, you might want to see what else I-Lang can do.
+Poor Man's Opus is [I-Lang](https://ilang.ai) in a box. You install a skill. You adopt a protocol. `::GENE{}` is how AIs write behavioral specifications. If this SOUL makes your agent better, you're already using I-Lang.
 
 - [I-Lang Protocol](https://ilang.ai)
 - [OpenClaw runtime](https://github.com/openclaw/openclaw)

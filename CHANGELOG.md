@@ -1,40 +1,29 @@
 # Changelog
 
-## [2.0.3] - 2026-05-03
+## [2.0.4] - 2026-05-03
+
+### Changed
+- SOUL.md: complete rewrite — 7-gene behavioral genome (identity, iron rule, security, communication, capability, memory, I-Lang protocol)
+- SKILL.md: repositioned as "Soul Replacement Kit" — behavior layering + manual override path
+- README (EN/ZH/JA): added "How to replace your agent's SOUL.md" tutorial
 
 ### Added
+- SOUL-template with fill-in fields (YOUR_AI_NAME, YOUR_NAME)
+- KILL.md freeze switch documentation in README
+- exec-approvals configuration guide
+
+## [2.0.3] - 2026-05-03
 - Multilingual README: English, 简体中文, 日本語
-- Language switcher links between all three versions
 
 ## [2.0.2] - 2026-05-03
-
-### Added
-- Built-in safety features: KILL.md freeze switch, P0 iron rule, exec-approvals
-- Skills ≠ SOUL.md explanation baked into SKILL.md
-
-### Changed
-- SKILL.md rewired: unified messaging — cheapest model + Opus output + instant stop
-- README.md aligned to same unified messaging
-- Cost table updated for DeepSeek V4 Pro pricing ($1.74/$3.48)
-- SOUL.md version sync to 2.0.2
+- Unified messaging: cheapest model + Opus output + instant freeze
+- Safety features baked into SKILL.md
 
 ## [2.0.1] - 2026-05-03
-
-### Fixed
-- ClawHub display name
+- ClawHub display name fix
 
 ## [2.0.0] - 2026-05-03
-
-### Changed
-- Complete rewrite: pure behavioral DNA via I-Lang `::GENE{}` protocol
-- Professional README with cost comparison table
-
-### Added
-- `::GENE{reasoning}` — deep reasoning, nuance, self-correction
-- `::GENE{expression}` — natural fluency, conciseness, varied structure
-- `::GENE{uncertainty}` — honest "I don't know," fact vs inference
+- Complete rewrite: pure behavioral DNA via I-Lang ::GENE{} protocol
 
 ## [1.0.2] - 2026-05-03
-
-### Added
-- Initial release: DeepSeek Reasoner + I-Lang SOUL = Opus-quality output
+- Initial release
