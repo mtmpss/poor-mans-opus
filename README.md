@@ -181,7 +181,7 @@ cp ~/SOUL.md.bak <your-workspace>/SOUL.md
 huggingface-cli download ilanguage/poor-mans-opus
 ```
 [ilanguage/poor-mans-opus](https://huggingface.co/ilanguage/poor-mans-opus) — Model repo  
-[ilanguage/poor-mans-opus-soul](https://huggingface.co/ilanguage/poor-mans-opus-soul) — SOUL template dataset
+[ilanguage/poor-mans-opus-soul](https://huggingface.co/datasets/ilanguage/poor-mans-opus-soul) — SOUL template dataset
 
 ### 🧠 Hermes Agent
 Hermes Agent is natively compatible with the `agentskills.io` standard — same format as this skill. No conversion needed.

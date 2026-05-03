@@ -178,7 +178,7 @@ cp ~/SOUL.md.bak <你的workspace>/SOUL.md
 huggingface-cli download ilanguage/poor-mans-opus
 ```
 [ilanguage/poor-mans-opus](https://huggingface.co/ilanguage/poor-mans-opus) — 模型仓库  
-[ilanguage/poor-mans-opus-soul](https://huggingface.co/ilanguage/poor-mans-opus-soul) — SOUL 模板数据集
+[ilanguage/poor-mans-opus-soul](https://huggingface.co/datasets/ilanguage/poor-mans-opus-soul) — SOUL 模板数据集
 
 ### 🧠 Hermes Agent
 Hermes Agent 原生兼容 `agentskills.io` 标准——跟这个技能格式完全一致，无需转换。
