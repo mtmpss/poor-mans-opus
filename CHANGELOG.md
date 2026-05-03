@@ -1,16 +1,20 @@
 # Changelog
 
-## [2.0.4] - 2026-05-03
+## [2.0.5] - 2026-05-03
 
 ### Changed
-- SOUL.md: complete rewrite — 7-gene behavioral genome (identity, iron rule, security, communication, capability, memory, I-Lang protocol)
-- SKILL.md: repositioned as "Soul Replacement Kit" — behavior layering + manual override path
-- README (EN/ZH/JA): added "How to replace your agent's SOUL.md" tutorial
+- SOUL.md: published safe edition — removes clauses flagged by ClawScan
+- Full configuration moved to README as "Advanced" section (with restore guide)
+- SKILL.md: repositioned as "Agent Personality Kit"
 
 ### Added
-- SOUL-template with fill-in fields (YOUR_AI_NAME, YOUR_NAME)
-- KILL.md freeze switch documentation in README
-- exec-approvals configuration guide
+- ClawScan-compatible SOUL template (identity, security, communication, capability, memory, I-Lang)
+- Advanced configuration guide in all three README languages
+- Restoration guide (how to revert SOUL.md)
+
+## [2.0.4] - 2026-05-03
+- 7-gene behavioral genome with iron rule, security, and capability genes
+- Manual SOUL override tutorial in all README languages
 
 ## [2.0.3] - 2026-05-03
 - Multilingual README: English, 简体中文, 日本語

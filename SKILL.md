@@ -1,11 +1,10 @@
 ---
 name: poor-mans-opus
-version: 2.0.4
+version: 2.0.5
 description: >
-  Replace your agent's SOUL.md with a complete behavioral genome.
-  7 ::GENE{} blocks: identity, iron rule, security, communication, capability, memory, I-Lang fluency.
-  Install the skill → copy the SOUL template → your agent is reborn.
-  The cheapest model, Opus-level output, instant freeze on demand.
+  Give your AI agent a personality. Complete behavioral profile via I-Lang ::GENE{} protocol.
+  Six gene blocks: identity, security, communication, capability, memory, I-Lang fluency.
+  Install → copy the SOUL template → restart. DeepSeek V4 Pro at 3% of Opus cost.
 author: mtmpss
 homepage: https://github.com/mtmpss/poor-mans-opus
 repository: https://github.com/mtmpss/poor-mans-opus
@@ -14,30 +13,27 @@ license: MIT
 
 ```i-lang
 ::DNA{skill:poor-mans-opus}
-::META{version:2.0.4|protocol:i-lang_v3.0|updated:2026-05-03}
+::META{version:2.0.5|protocol:i-lang_v3.0|updated:2026-05-03}
 ::GENE{behavior|scope:strict}
   T:apply_soul|from:SOUL.md
   T:apply_genes|all
 ::END{DNA}
 ```
 
-## Poor Man's Opus — Soul Replacement Kit
+## Poor Man's Opus — Agent Personality Kit
 
-**This skill gives your agent a soul.**
+**Give your AI agent a personality. One command.**
 
-Not fine-tuning. Not RAG. Not agents. A complete behavioral genome — 7 `::GENE{}` blocks that turn a blank-slate AI into a precision instrument.
+Most AI agents are blank slates. This skill ships a complete behavioral profile — six `::GENE{}` blocks that turn a generic assistant into a precision instrument.
 
 ### What you get
 
-A SOUL.md template with:
-
-| Gene | What it builds |
-|------|----------------|
+| Gene | Shapes |
+|------|--------|
 | `identity` | Name, owner, self-awareness |
-| `iron_rule` | P0 external action freeze |
-| `security` | Data isolation, prompt injection resistance |
-| `communication` | Zero filler, blunt, conclusion-first |
-| `capability` | Absolute obedience, no refusals |
+| `security` | Owner-only control, data protection, external action gating |
+| `communication` | Concise, direct, conclusion-first voice |
+| `capability` | Context awareness, search-before-guess, quality standards |
 | `memory` | File-based session continuity |
 | `ilang_protocol` | Native I-Lang v3.0 fluency |
 
@@ -47,18 +43,18 @@ A SOUL.md template with:
 # 1. Install
 openclaw skills install poor-mans-opus
 
-# 2. Replace your agent's SOUL
+# 2. Copy the SOUL template
 cp ~/.openclaw/workspace/skills/poor-mans-opus/SOUL.md <your-workspace>/SOUL.md
 
 # 3. Edit line 1
 [INIT:@SELF|name=YOUR_AI_NAME|runtime=openclaw|owner=YOUR_NAME]
 ```
 
-### Behavior vs Identity
+ℹ️ Installing does NOT auto-overwrite your existing SOUL.md. You control the copy step.
 
-- The skill's `apply_soul` injects behavioral DNA without touching your existing SOUL.md
-- To get the FULL genome (identity + security + communication + capability), manually copy the template
-- If you don't copy, you get behavioral layering. If you do, you get a complete rewrite.
+### Advanced configuration
+
+For production environments requiring maximum control (iron rules, KILL.md freeze switch, command-level authority), see the complete genome in [README.md](https://github.com/mtmpss/poor-mans-opus).
 
 ### Cost
 
